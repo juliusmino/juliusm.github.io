@@ -1,7 +1,19 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello</h1>
-<p>Github</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Date and Time</title>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('date-time').textContent = now.toLocaleString();
+        }
+        setInterval(updateTime, 1000); // Update the time every second
+    </script>
+</head>
+<body onload="updateTime()">
+    <h1>Current Date and Time</h1>
+    <p id="date-time"></p>
 </body>
 </html>
